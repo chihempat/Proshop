@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "mern shopping cart app",
   "main": "server.js",
-  "type":"module",
+  "type": "module",
   "bin": {
     "proshop": "test.js"
   },
@@ -27,8 +27,13 @@
   },
   "homepage": "https://github.com/chihempat/Prosop#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "color": "^4.0.1",
+    "colors": "^1.4.0",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^6.0.11"
   },
   "devDependencies": {
     "concurrently": "^6.3.0",
