@@ -1,5 +1,6 @@
 import React from 'react'
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap'
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
+import Rating from './Rating';
 
 const Product = ({product}) => {
   return (
@@ -12,7 +13,7 @@ const Product = ({product}) => {
         <a href={`/product/${product._id}`}>
           <CardTitle as='div'><strong>{product.name}</strong></CardTitle>
         </a>
-        <CardText as='div'><div className='my-3'>{product.rating} from {product.numReviews}</div></CardText>
+        <CardText as='div'><Rating value={product.rating} text={`${product.numReviews} reviews`} /></CardText>
         <CardText as='h3'>${product.price}</CardText>
       </CardBody>
     </Card>
