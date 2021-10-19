@@ -2,7 +2,7 @@ import { PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS, PRODUCT_LIST_FAIL } from '.
 import axios from 'axios';
 
 
-//usinf redux thunk
+//using redux thunk
 export const listProducts = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST });
