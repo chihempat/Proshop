@@ -19,11 +19,11 @@ It is work in progress and is still in development.
 
 ## Technologies ##
 
-The following tools were used in this project:
 [![JavaScript](https://img.icons8.com/color/48/000000/javascript--v1.png)](https:developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![React](https://img.icons8.com/office/48/000000/react.png)](https://reactjs.org/)
 [![Node.js](https://img.icons8.com/color/48/000000/nodejs.png)](https://nodejs.org/)
 [![MongoDB](https://img.icons8.com/color/48/000000/mongodb.png)](https://www.mongodb.com/)
+
 
 Before starting, you need to install the following dependencies:
 
