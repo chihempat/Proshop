@@ -33,7 +33,7 @@ Before starting, you need to install the following dependencies:
 ![ss](./frontend/public/images/ss.png)
 
 
-Tutorial Followed  <a href="https://twitter.com/traversymedia?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">Brad Traversy
+Inspired by Followed  <a href="https://twitter.com/traversymedia?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">Brad Traversy
 </a>
 
 Made by <a href="https://github.com/{{chihempat}}" target="_blank">Chintan Patel</a>
