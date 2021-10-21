@@ -5,23 +5,22 @@ import colors from 'colors';
 import connectDB from './config/db.js';
 import {notFound, errorHandler} from './middleware/errorMiddleware.js';
 
-
 import productRoutes from './routes/productRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 dotenv.config();
 
 connectDB();
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.use(express.json()); //Used to parse JSON bodies
+app.use(express.urlencoded({ extended: true })) //Used to parse URL encoded bodies
 
 app.use('/api/products', productRoutes);
+app.use('/api/users', userRoutes)
 
 
 app.use(notFound);
-
 app.use(errorHandler);
 
 
