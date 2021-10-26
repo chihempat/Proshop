@@ -32,6 +32,9 @@ Before starting, you need to install the following dependencies:
 
 ![ss](./frontend/public/images/ss.png)
 ![order](./frontend/public/images/ss2.png)
+![orderList](./frontend/public/images/ss3.png)
+![payment](./frontend/public/images/ss4.png)
+
 
 
 

@@ -10,14 +10,20 @@ import {
 } from '../controllers/orderController.js'
 import { protect } from '../middleware/authMiddleware.js'
 
-router.route('/').post(protect, addOrderItems)
-  .get(protect, getOrders)
-router.route('/myorders').get(protect, getMyOrders)
+router.route('/')
+  .post(protect, addOrderItems)
+  .get(protect, getOrders);
 
-router.route('/:id').get(protect, getOrderById)
+router.route('/myorders')
+  .get(protect, getMyOrders)
 
-router.route('/:id/pay').put(protect, updateOrderToPaid)
+router.route('/:id')
+  .get(protect, getOrderById)
 
-router.route('/:id/deliver').put(protect, updateOrderToDelivered)
+router.route('/:id/pay')
+  .put(protect, updateOrderToPaid)
+
+router.route('/:id/deliver')
+  .put(protect, updateOrderToDelivered)
 
 export default router
