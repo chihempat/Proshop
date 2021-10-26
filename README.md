@@ -31,6 +31,8 @@ Before starting, you need to install the following dependencies:
 [![npm](https://img.icons8.com/color/48/000000/npm.png)](https://www.npmjs.com/)
 
 ![ss](./frontend/public/images/ss.png)
+![order](./frontend/public/images/ss2.png)
+
 
 
 Inspired by <a href="https://twitter.com/traversymedia?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">Brad Traversy
