@@ -28,7 +28,7 @@ const RegisterScreen = ({location,history}) => {
       // .log(userInfo);
       history.push(redirect);
     }
-  }, [history,userRegister,redirect]);
+  }, [history,userRegister,redirect,userInfo]);
 
   const submitHandler =  (e) => {
     e.preventDefault();

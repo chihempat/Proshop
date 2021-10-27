@@ -31,7 +31,7 @@ Before starting, you need to install the following dependencies:
 [![npm](https://img.icons8.com/color/48/000000/npm.png)](https://www.npmjs.com/)
 
 ![ss](./frontend/public/images/ss.png)
-![order](./frontend/public/images/ss2.png)
+![admin](./frontend/public/images/ss2.png)
 ![orderList](./frontend/public/images/ss3.png)
 ![payment](./frontend/public/images/ss4.png)
 
