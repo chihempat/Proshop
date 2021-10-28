@@ -29,7 +29,6 @@ function CartScreen({ match, location, history }) {
   }
 
   return (
-    console.log("=====>",cartItems),
     <Row>
       <Col md={8}>
         <h1>Shopping Cart</h1>

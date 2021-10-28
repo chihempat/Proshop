@@ -38,7 +38,6 @@ const registerUser = asyncHandler(async (req, res) => {
     throw new Error('User already exist');
   } else {
 
-    console.log(name,email,password);
     const user = await User.create({ name, email, password });
 
     if(user) {
