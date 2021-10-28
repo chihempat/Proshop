@@ -249,9 +249,9 @@ export const deleteUser = (id) => async (dispatch, getState) => {
 
 export const logout = () => (dispatch) => {
   localStorage.removeItem('userInfo');
-  // localStorage.removeItem('cartItems')
-  // localStorage.removeItem('shippingAddress')
-  // localStorage.removeItem('paymentMethod')
+  localStorage.removeItem('cartItems')
+  localStorage.removeItem('shippingAddress')
+  localStorage.removeItem('paymentMethod')
   dispatch({
     type: USER_LOGOUT,
   });

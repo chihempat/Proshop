@@ -25,6 +25,6 @@ router.route('/:id/pay')
   .put(protect, updateOrderToPaid)
 
 router.route('/:id/deliver')
-  .put(protect, updateOrderToDelivered)
+  .put(protect, admin, updateOrderToDelivered)
 
 export default router

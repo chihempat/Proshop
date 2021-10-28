@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import { Form, Button } from 'react-bootstrap';
+import { Form, FormFile, Button } from 'react-bootstrap';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
 import FormContainer from '../components/FormContainer';
@@ -26,7 +27,11 @@ const ProductEditScreen = ({ match, history }) => {
   const { loading, error, product } = productDetails;
 
   const productUpdate = useSelector((state) => state.productUpdate);
-  const { loading: loadingUpdate, error: errorUpdate, success: successUpdate } = productUpdate;
+  const {
+    loading: loadingUpdate,
+    error: errorUpdate,
+    success: successUpdate
+  } = productUpdate;
 
   // const productUpdate = useSelector((state) => state.productUpdate);
   // const {
@@ -35,10 +40,7 @@ const ProductEditScreen = ({ match, history }) => {
   //   success: successUpdate
   // } = productUpdate;
 
-
-
   useEffect(() => {
-
     if (successUpdate) {
       dispatch({ type: PRODUCT_UPDATE_RESET });
       history.push('/admin/productList');
@@ -56,7 +58,7 @@ const ProductEditScreen = ({ match, history }) => {
         }
     }
 
-  }, [dispatch, product, productId, history, successUpdate]);
+  }, [dispatch, history, productId, product, successUpdate]);
 
   const submitHandler =  (e) => {
     e.preventDefault();
@@ -72,6 +74,26 @@ const ProductEditScreen = ({ match, history }) => {
     }));
   };
 
+ const uploadFileHandler = async (e) => {
+    const file = e.target.files[0];
+    const formData = new FormData();
+    formData.append('image', file);
+    setUploading(true);
+
+    try {
+      const config = {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      }
+      const { data } = await axios.post('/api/upload', formData, config);
+      setImage(data);
+      setUploading(false);
+    } catch (error) {
+      console.error(error);
+      setUploading(false);
+    }
+  }
   return (
     <>
       <Link to='/admin/productList' className='btn btn-light my-3'>
@@ -104,17 +126,24 @@ const ProductEditScreen = ({ match, history }) => {
                 onChange={(e) => setPrice(e.target.value)}
               ></Form.Control>
           </Form.Group>
-            <br/>
+            <br />
           <Form.Group controlId='image'>
-            <Form.Label>Image</Form.Label>
-            <Form.Control
-              type='text'
-              placeholder='Enter Image Url'
-              value={image}
-              onChange={(e) => setImage(e.target.value)}
-            ></Form.Control>
+              <Form.Label>Image</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter image url'
+                value={image}
+                onChange={(e) => setImage(e.target.value)}
+              ></Form.Control>
+              <Form.File
+                id='image-file'
+                label='Choose File'
+                custom
+                onChange={uploadFileHandler}
+              />
+              {uploading && <Loader />}
           </Form.Group>
-          <br/>
+
           <Form.Group controlId='brand'>
             <Form.Label>Brand</Form.Label>
             <Form.Control
