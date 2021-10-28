@@ -73,7 +73,7 @@ function OrderScreen({ match, history }) {
     }
 
 
-  }, [dispatch, orderId, order, successPay, successDeliver, loadingDeliver]);
+  }, [dispatch, orderId, order, successPay, successDeliver, loadingDeliver,history, userInfo]);
 
   const successPaymentHandler = (paymentResult) => {
     dispatch(payOrder(orderId,paymentResult));

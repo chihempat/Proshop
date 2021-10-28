@@ -9,7 +9,9 @@ import Message from '../components/Message';
 
 
 
-const HomeScreen = () => {
+const HomeScreen = ({match}) => {
+
+  const keyword = match.params.keyword;
 
   //mapDispatchToProps
   const dispatch = useDispatch();
@@ -19,8 +21,8 @@ const HomeScreen = () => {
   const { products, loading, error } = productList;
 
   useEffect(() => {
-    dispatch(listProducts());
-  }, [dispatch]);
+    dispatch(listProducts(keyword));
+  }, [dispatch,keyword]);
 
 
   return (
