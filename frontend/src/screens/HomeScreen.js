@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import {useDispatch,useSelector} from 'react-redux';
 import { Row, Col } from 'react-bootstrap';
 import Product from '../components/Product';
-import axios from 'axios';
 import { listProducts } from '../actions/productActions';
 import Loader from '../components/Loader';
 import Paginate from '../components/Paginate';
 import Message from '../components/Message';
+import ProductCarousel from '../components/ProductCarousel';
 
 
 
@@ -29,7 +29,7 @@ const HomeScreen = ({match}) => {
 
   return (
     <>
-
+      {!keyword && <ProductCarousel />}
       <h1>Latest Products</h1>
       {loading ? <Loader />: error ? <Message variant='danger'>{error}</Message> :
         <>
