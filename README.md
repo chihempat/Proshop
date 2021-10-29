@@ -1,10 +1,9 @@
-<!-- <div align="center" id="top"> -->
 
+<h1 align="center">Propshop</h1>
 
-  <!-- <a href="https://proshop.netlify.app">Demo</a> -->
-<!-- </div> -->
-
-<h1 align="center">Proshop</h1>
+<div align="right" id="top">
+  <a href="https://proshopappjs.herokuapp.com/">Proshop Heruko</a>
+</div>
 
 ## About ##
 
