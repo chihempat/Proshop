@@ -6,8 +6,11 @@ const Footer = () => {
     <footer>
       <Container>
         <Row>
-          <Col className="text-center py-3">
-            Copyright &copy; 2020 - ProShop
+          <Col className="text-start py-3">
+            Copyright &copy; 2021 - ProShop
+          </Col>
+          <Col className="text-end py-3">
+           Made by <a href="https://github.com/chihempat">Chintan Patel</a>
           </Col>
         </Row>
       </Container>
