@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Button, Col } from 'react-bootstrap';
 import FormContainer from '../components/FormContainer';
@@ -17,10 +17,6 @@ function PaymentScreen({ history }) {
 
   const [paymentMethod, setPaymentMethod] = useState('PayPal');
 
-  const [address, setAddress] = useState(shippingAddress.address);
-  const [city, setCity] = useState(shippingAddress.city);
-  const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
-  const [country, setCountry] = useState(shippingAddress.country);
 
   const submitHandler = (e) => {
     e.preventDefault();

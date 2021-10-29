@@ -1,12 +1,10 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useEffect } from 'react';
 // import { PayPalButton } from 'react-paypal-button-v2';
 import { Link } from 'react-router-dom';
 import { Row, Col, ListGroup, Image, Card, Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import Message from '../components/Message';
-import Loader from '../components/Loader';
 import CheckoutSteps from '../components/CheckoutSteps';
 import { createOrder } from '../actions/orderActions';
 
@@ -36,7 +34,7 @@ function PlaceOrderScreen({history}) {
   ).toFixed(2);
 
   const orderCreate = useSelector(state => state.orderCreate);
-  const { loading, success, error, order } = orderCreate;
+  const { success, error, order } = orderCreate;
 
   useEffect(() => {
     if (success) {

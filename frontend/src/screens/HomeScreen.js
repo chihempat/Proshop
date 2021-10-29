@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet'
 import {useDispatch,useSelector} from 'react-redux';
 import { Row, Col } from 'react-bootstrap';
 import Product from '../components/Product';
