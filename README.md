@@ -1,14 +1,13 @@
 
 <h1 align="center">Propshop</h1>
 
-<div align="right" id="top">
-  <a href="https://proshopappjs.herokuapp.com/">Proshop Heruko</a>
-</div>
-
 ## About ##
 
 ProShop is an ecommerce platform that allows you to sell your products online.
 It is work in progress and is still in development.
+
+### Hosted on: [Heroko](https://proshopappjs.herokuapp.com/)
+
 
 <!-- ## :sparkles: Features ##
 
