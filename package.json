@@ -2,7 +2,7 @@
   "name": "proshop",
   "version": "1.0.0",
   "engines": {
-    "node": "6.11.1"
+    "node" : ">=8.6"
   },
   "description": "mern shopping cart app",
   "main": "server.js",
